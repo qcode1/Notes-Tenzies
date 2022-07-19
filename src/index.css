@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Koulen', cursive;
+  font-family: 'Karla', sans-serif;
 }
 
 body {
@@ -11,13 +11,15 @@ body {
 
 main {
   background-color: #F5F5F5;
-  height: 400px;
-  max-width: 800px;
+
+  height: calc(95vh);
+  min-height: 500px;
+  max-width: 100%;
   border-radius: 5px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -25,6 +27,7 @@ main {
   display: grid;
   grid-template: auto auto / repeat(5, 1fr);
   gap: 20px;
+  margin-bottom: 40px;
 }
 
 .die-face {
@@ -36,9 +39,50 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: white;
+}
+
+.die-face.held {
+  background-color: #59E391;
 }
 
 .die-num {
   font-size: 2rem;
+}
+
+button {
+  background: #5035FF;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border: none;
+  border-radius: 3.81277px;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 16.384px;
+  line-height: 19px;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25.6px;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  color: #2B283A;
+}
+
+.instructions {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.03em;
+  color: #4A4E74;
+  width: 320px;
+  text-align: center;
+}
+
+.roll-counter {
+  position: relative;
+  top: 0;
+  margin-left: auto;
 }
